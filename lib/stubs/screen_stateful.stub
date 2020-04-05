@@ -1,0 +1,15 @@
+import 'package:flutter/material.dart';
+
+class {{ pascalCaseName }}Screen extends StatefulWidget {
+  @override
+  _{{ pascalCaseName }}ScreenState createState() => _{{ pascalCaseName }}ScreenState();
+}
+
+class _{{ pascalCaseName }}ScreenState extends State<{{ pascalCaseName }}Screen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(),
+    );
+  }
+}

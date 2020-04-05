@@ -1,0 +1,10 @@
+part of '{{ snakeCaseName }}_bloc.dart';
+
+abstract class {{ pascalCaseName }}State extends Equatable {
+  const {{ pascalCaseName }}State();
+}
+
+class {{ pascalCaseName }}Initial extends {{ pascalCaseName }}State {
+  @override
+  List<Object> get props => [];
+}

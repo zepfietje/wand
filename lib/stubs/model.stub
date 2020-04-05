@@ -1,0 +1,44 @@
+import 'package:equatable/equatable.dart';
+
+/// The model of the {{ noCaseName }} entity.
+class {{ pascalCaseName }} extends Equatable {
+  /// A constructor to create a {{ noCaseName }} instance from the given fields.
+  const {{ pascalCaseName }}({
+    this.id,
+  });
+
+  /// The unique identifier of this {{ noCaseName }}.
+  final int id;
+
+  @override
+  List<Object> get props => [
+        id,
+      ];
+
+  @override
+  String toString() => '{{ pascalCaseName }} { id: $id }';
+
+  /// Creates a {{ noCaseName }} instance from a JSON map.
+  factory {{ pascalCaseName }}.fromJson(Map<String, dynamic> json) {
+    return {{ pascalCaseName }}(
+      id: json['id'],
+    );
+  }
+
+  /// Creates a JSON map from this {{ noCaseName }}.
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+    };
+  }
+
+  /// Creates a copy of this {{ noCaseName }} with the given fields replaced by the new
+  /// values.
+  {{ pascalCaseName }} copyWith({
+    int id,
+  }) {
+    return {{ pascalCaseName }}(
+      id: id ?? this.id,
+    );
+  }
+}
