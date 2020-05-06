@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class {{ pascalCaseName }}Screen extends StatelessWidget {
+  const {{ pascalCaseName }}Screen({
+    Key key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class {{ pascalCaseName }}Screen extends StatefulWidget {
+  const {{ pascalCaseName }}Screen({
+    Key key,
+  }) : super(key: key);
+
   @override
   _{{ pascalCaseName }}ScreenState createState() => _{{ pascalCaseName }}ScreenState();
 }
