@@ -13,7 +13,7 @@ class {{ pascalCaseName }} extends Equatable {
       ];
 
   @override
-  String toString() => '{{ pascalCaseName }} { id: $id }';
+  bool get stringify => true;
 
   factory {{ pascalCaseName }}.fromJson(Map<String, dynamic> json) {
     return {{ pascalCaseName }}(
