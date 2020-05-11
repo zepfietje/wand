@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class {{ pascalCaseName }}Screen extends StatelessWidget {
-  const {{ pascalCaseName }}Screen({
+class {{ pascalCaseName }}Page extends StatelessWidget {
+  const {{ pascalCaseName }}Page({
     Key key,
   }) : super(key: key);
 

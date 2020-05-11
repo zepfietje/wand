@@ -12,8 +12,8 @@ class MakeCommand extends Command {
   MakeCommand() {
     addSubcommand(MakeBlocSubcommand());
     addSubcommand(MakeModelSubcommand());
+    addSubcommand(MakePageSubcommand());
     addSubcommand(MakeRepositorySubcommand());
-    addSubcommand(MakeScreenSubcommand());
     addSubcommand(MakeWidgetSubcommand());
   }
 }
