@@ -7,10 +7,10 @@ import '../utils/name.dart';
 
 class MakeWidgetSubcommand extends Command {
   @override
-  final name = 'widget';
+  String get name => 'widget';
 
   @override
-  final description = 'Create a new widget class.';
+  String get description => 'Create a new widget class.';
 
   MakeWidgetSubcommand() {
     argParser.addFlag('stateful', negatable: false);

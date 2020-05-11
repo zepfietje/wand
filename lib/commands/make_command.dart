@@ -4,10 +4,10 @@ import '../commands/commands.dart';
 
 class MakeCommand extends Command {
   @override
-  final name = 'make';
+  String get name => 'make';
 
   @override
-  final description = 'Create a new class.';
+  String get description => 'Create a new class.';
 
   MakeCommand() {
     addSubcommand(MakeBlocSubcommand());

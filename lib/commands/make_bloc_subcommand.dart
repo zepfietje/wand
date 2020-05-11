@@ -7,10 +7,10 @@ import '../utils/name.dart';
 
 class MakeBlocSubcommand extends Command {
   @override
-  final name = 'bloc';
+  String get name => 'bloc';
 
   @override
-  final description = 'Create a new bloc.';
+  String get description => 'Create a new bloc.';
 
   @override
   void run() async {

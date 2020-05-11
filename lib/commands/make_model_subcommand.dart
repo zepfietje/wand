@@ -7,10 +7,10 @@ import '../utils/name.dart';
 
 class MakeModelSubcommand extends Command {
   @override
-  final name = 'model';
+  String get name => 'model';
 
   @override
-  final description = 'Create a new model class.';
+  String get description => 'Create a new model class.';
 
   @override
   void run() async {

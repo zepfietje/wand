@@ -7,10 +7,10 @@ import '../utils/name.dart';
 
 class MakeRepositorySubcommand extends Command {
   @override
-  final name = 'repository';
+  String get name => 'repository';
 
   @override
-  final description = 'Create a new repository class.';
+  String get description => 'Create a new repository class.';
 
   @override
   void run() async {

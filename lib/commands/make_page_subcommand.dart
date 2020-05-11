@@ -7,10 +7,10 @@ import '../utils/name.dart';
 
 class MakePageSubcommand extends Command {
   @override
-  final name = 'page';
+  String get name => 'page';
 
   @override
-  final description = 'Create a new page class.';
+  String get description => 'Create a new page class.';
 
   MakePageSubcommand() {
     argParser.addFlag('stateful', negatable: false);
@@ -31,9 +31,6 @@ class MakePageSubcommand extends Command {
       throw Exception('Page already exists!');
     }
 
-    var stubPath = argResults['stateful']
-        ? '$packageDirectory/lib/stubs/page_stateful.stub'
-        : '$packageDirectory/lib/stubs/page_stateless.stub';
     var stub = await getStub(
       argResults['stateful'] ? 'page_stateful' : 'page_stateless',
     );
