@@ -2,9 +2,6 @@ part of '{{ snakeCaseName }}_bloc.dart';
 
 abstract class {{ pascalCaseName }}State extends Equatable {
   const {{ pascalCaseName }}State();
-
-  @override
-  bool get stringify => true;
 }
 
 class {{ pascalCaseName }}Initial extends {{ pascalCaseName }}State {
