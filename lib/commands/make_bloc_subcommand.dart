@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
-import '../fly.dart';
 import '../utils/name.dart';
+import '../wand.dart';
 
 class MakeBlocSubcommand extends Command {
   @override

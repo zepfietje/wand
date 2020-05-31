@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'package:args/command_runner.dart';
-import 'package:fly/commands/commands.dart';
+import 'package:wand/commands/commands.dart';
 
 void main(List<String> arguments) {
-  var runner = CommandRunner('fly', 'TODO: description')
+  var runner = CommandRunner('wand', 'TODO: description')
     ..addCommand(MakeCommand());
 
   runner.run(arguments).catchError((error) {
