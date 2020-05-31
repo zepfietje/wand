@@ -2,6 +2,32 @@
 
 # Wand
 
+Wand is a command-line tool for Flutter code generation.  
+Create models, widgets, pages and [blocs](https://github.com/felangel/bloc) in a wink.
+
+## Installation
+
+1. Install the [Dart SDK](https://dart.dev/get-dart).
+2. Install this package.
+   ```console
+   $ pub global activate wand
+   ```
+
+## Usage
+
+List available commands and subcommands.
+
+```console
+$ wand -h
+$ wand make -h
+```
+
+Generate classes (for example a model).
+
+```console
+$ wand make model user
+```
+
 ## Starware
 
 Wand is Starware.  
