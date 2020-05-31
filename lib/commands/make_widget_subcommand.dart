@@ -10,7 +10,7 @@ class MakeWidgetSubcommand extends Command {
   String get name => 'widget';
 
   @override
-  String get description => 'Create a new widget class.';
+  String get description => 'Create a new widget.';
 
   MakeWidgetSubcommand() {
     argParser.addFlag('stateful', negatable: false);

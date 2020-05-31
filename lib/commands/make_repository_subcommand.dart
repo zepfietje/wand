@@ -10,7 +10,7 @@ class MakeRepositorySubcommand extends Command {
   String get name => 'repository';
 
   @override
-  String get description => 'Create a new repository class.';
+  String get description => 'Create a new repository.';
 
   @override
   void run() async {

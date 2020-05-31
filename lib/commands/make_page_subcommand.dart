@@ -10,7 +10,7 @@ class MakePageSubcommand extends Command {
   String get name => 'page';
 
   @override
-  String get description => 'Create a new page class.';
+  String get description => 'Create a new page.';
 
   MakePageSubcommand() {
     argParser.addFlag('stateful', negatable: false);

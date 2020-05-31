@@ -10,7 +10,7 @@ class MakeModelSubcommand extends Command {
   String get name => 'model';
 
   @override
-  String get description => 'Create a new model class.';
+  String get description => 'Create a new model.';
 
   @override
   void run() async {
