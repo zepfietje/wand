@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
+import '../stubs/stubs.dart';
 import '../utils/name.dart';
-import '../wand.dart';
 
 class MakePageSubcommand extends Command {
   @override
@@ -31,13 +31,12 @@ class MakePageSubcommand extends Command {
       throw Exception('Page already exists!');
     }
 
-    var stub = await getStub(
-      argResults['stateful'] ? 'page_stateful' : 'page_stateless',
-    );
-    var page = fillName(stub, name);
-
     await Directory(directoryPath).create();
-    await file.writeAsString(page);
+    await file.writeAsString(
+      argResults['stateful']
+          ? PageStatefulStub(name).filled
+          : PageStatelessStub(name).filled,
+    );
 
     print('Page created successfully.');
   }

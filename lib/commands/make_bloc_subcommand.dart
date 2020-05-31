@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
+import '../stubs/stubs.dart';
 import '../utils/name.dart';
-import '../wand.dart';
 
 class MakeBlocSubcommand extends Command {
   @override
@@ -27,22 +27,13 @@ class MakeBlocSubcommand extends Command {
       throw Exception('Bloc folder already exists!');
     }
 
-    var blocStub = await getStub('bloc');
-    var bloc = fillName(blocStub, name);
-
-    var eventStub = await getStub('bloc_event');
-    var event = fillName(eventStub, name);
-
-    var stateStub = await getStub('bloc_state');
-    var state = fillName(stateStub, name);
-
     await Directory(directoryPath).create(recursive: true);
     await File('$directoryPath/${name.toSnakeCase()}_bloc.dart')
-        .writeAsString(bloc);
+        .writeAsString(BlocStub(name).filled);
     await File('$directoryPath/${name.toSnakeCase()}_event.dart')
-        .writeAsString(event);
+        .writeAsString(BlocEventStub(name).filled);
     await File('$directoryPath/${name.toSnakeCase()}_state.dart')
-        .writeAsString(state);
+        .writeAsString(BlocStateStub(name).filled);
 
     print('Bloc created successfully.');
   }

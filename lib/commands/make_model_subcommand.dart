@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
+import '../stubs/stubs.dart';
 import '../utils/name.dart';
-import '../wand.dart';
 
 class MakeModelSubcommand extends Command {
   @override
@@ -27,11 +27,8 @@ class MakeModelSubcommand extends Command {
       throw Exception('Model already exists!');
     }
 
-    var stub = await getStub('model');
-    var model = fillName(stub, name);
-
     await Directory(directoryPath).create();
-    await file.writeAsString(model);
+    await file.writeAsString(ModelStub(name).filled);
 
     print('Model created successfully.');
   }

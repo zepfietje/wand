@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
+import '../stubs/stubs.dart';
 import '../utils/name.dart';
-import '../wand.dart';
 
 class MakeRepositorySubcommand extends Command {
   @override
@@ -27,11 +27,8 @@ class MakeRepositorySubcommand extends Command {
       throw Exception('Repository already exists!');
     }
 
-    var stub = await getStub('repository');
-    var repository = fillName(stub, name);
-
     await Directory(directoryPath).create();
-    await file.writeAsString(repository);
+    await file.writeAsString(RepositoryStub(name).filled);
 
     print('Repository created successfully.');
   }

@@ -1,5 +1,0 @@
-part of '{{ snakeCaseName }}_bloc.dart';
-
-abstract class {{ pascalCaseName }}Event extends Equatable {
-  const {{ pascalCaseName }}Event();
-}

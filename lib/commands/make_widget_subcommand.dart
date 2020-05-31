@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 
+import '../stubs/stubs.dart';
 import '../utils/name.dart';
-import '../wand.dart';
 
 class MakeWidgetSubcommand extends Command {
   @override
@@ -31,13 +31,12 @@ class MakeWidgetSubcommand extends Command {
       throw Exception('Widget already exists!');
     }
 
-    var stub = await getStub(
-      argResults['stateful'] ? 'widget_stateful' : 'widget_stateless',
-    );
-    var widget = fillName(stub, name);
-
     await Directory(directoryPath).create();
-    await file.writeAsString(widget);
+    await file.writeAsString(
+      argResults['stateful']
+          ? WidgetStatefulStub(name).filled
+          : WidgetStatelessStub(name).filled,
+    );
 
     print('Widget created successfully.');
   }

@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:args/command_runner.dart';
-import 'package:wand/commands/commands.dart';
+import 'package:wand/wand.dart';
 
 void main(List<String> arguments) {
   var runner = CommandRunner(
