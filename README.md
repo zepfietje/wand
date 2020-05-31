@@ -3,7 +3,7 @@
 
 # Wand
 
-Wand is a command-line tool for Flutter code generation.  
+Wand is a command-line tool for generating boilerplate code for Flutter.  
 Create models, widgets, pages and [blocs](https://github.com/felangel/bloc) in a wink.
 
 ## Installation
