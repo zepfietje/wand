@@ -5,7 +5,7 @@ import 'package:wand/commands/commands.dart';
 void main(List<String> arguments) {
   var runner = CommandRunner(
     'wand',
-    'Command-line tool for Flutter code generation.',
+    'Command-line tool for generating boilerplate code for Flutter.',
   )..addCommand(MakeCommand());
 
   runner.run(arguments).catchError((error) {
