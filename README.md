@@ -1,3 +1,4 @@
+[![Pub Version](https://img.shields.io/pub/v/wand)](https://pub.dev/packages/wand)
 [![Starware](https://img.shields.io/badge/Starware-%E2%AD%90-black?labelColor=%23f9b00d)](https://github.com/zepfietje/starware)
 
 # Wand
