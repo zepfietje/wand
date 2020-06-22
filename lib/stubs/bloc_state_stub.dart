@@ -7,8 +7,13 @@ class BlocStateStub extends Stub {
   String get template => '''
     part of '{{ snakeCaseName }}_bloc.dart';
 
-    abstract class {{ pascalCaseName }}Event extends Equatable {
-      const {{ pascalCaseName }}Event();
+    abstract class {{ pascalCaseName }}State extends Equatable {
+      const {{ pascalCaseName }}State();
+    }
+
+    class {{ pascalCaseName }}Initial extends {{ pascalCaseName }}State {
+      @override
+      List<Object> get props => [];
     }
   ''';
 }
